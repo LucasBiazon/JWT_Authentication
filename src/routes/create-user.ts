@@ -3,6 +3,7 @@ import bcrypt from 'bcrypt';
 import { PrismaClient } from '@prisma/client';
 
 const prisma = new PrismaClient();
+
 export async function CreateUser(server: FastifyInstance) {
   server.post('/create-user', async (request, reply) => {
     try{
@@ -17,7 +18,6 @@ export async function CreateUser(server: FastifyInstance) {
           email,
           password: hashedPassword
         }
-       
       });
  
       return reply.status(201).send({ message: 'Usuário criado com sucesso' });
