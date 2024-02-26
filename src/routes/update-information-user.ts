@@ -4,7 +4,6 @@ import { PrismaClient } from '@prisma/client';
 
 const prisma = new PrismaClient();
 
-// Defina a interface para os parâmetros da URL
 interface UpdateUserParams {
   userId: string;
 }
@@ -25,10 +24,6 @@ export async function UpdateUser(server: FastifyInstance) {
       }
 
       const userIdFromToken = decodedToken.id;
-
-    
-
-      
 
       const { email, password } = request.body as { email: string, password: string };
 
