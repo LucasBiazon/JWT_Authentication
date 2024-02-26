@@ -24,7 +24,7 @@ export async function DeleteUser(server: FastifyInstance) {
           reply.status(401).send({ message: 'Token JWT não fornecido' });
           return;
         }
-  
+        
         const decodedToken: any = await server.jwt.verify(token);
         if (!decodedToken) {
           reply.status(401).send({ message: 'Token JWT inválido' });

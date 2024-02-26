@@ -2,7 +2,7 @@ import fastify from "fastify";
 import fastifyJwt from "@fastify/jwt";
 import {CreateUser} from "./routes/create-user"
 import { LoginUser } from "./routes/login-user";
-import { LogoutUser } from "./routes/logout-user";
+import { LeituratUser } from "./routes/leitura-user";
 import { UpdateUser } from "./routes/update-information-user";
 import { DeleteUser } from "./routes/delete-user";
 
@@ -17,7 +17,7 @@ server.register(fastifyJwt,{secret: 'mysecrete'} )
 
 server.register(CreateUser)
 server.register(LoginUser)
-server.register(LogoutUser)
+server.register(LeituratUser)
 server.register(UpdateUser)
 server.register(DeleteUser)
 
