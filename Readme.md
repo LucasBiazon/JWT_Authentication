@@ -20,7 +20,7 @@ git clone https://github.com/seu-usuario/seu-projeto.git](https://github.com/Luc
 2. Instale as dependências:
 
 ```bash
-cd seu-projeto
+cd JWT_Authentication
 npm install
 ```
 
